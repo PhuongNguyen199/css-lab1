@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <h2>Tính diện tích hình chữ nhật</h2>
+            <p>
+                <label for="txtUSD">Nhập chiều dài: </label>
+                <input type="number" name="usd" id="chieudai" value="0"/>
+            </p>
+            <p>
+                <label for="txtUSD">Nhập chiều rộng: </label>
+                <input type="number" name="usd" id="chieurong" value="0"/>
+            </p>
+            <p>
+                <label for="txtF">Diện tích hình chữ nhật là: </label>
+                <span id="dientich"></span>
+            </p>
+            <button onclick="calcC()">Đổi</button>
+    </div>
+
+    <script type="text/javascript">
+        function calcC(){
+            let chieudai= document.getElementById('chieudai').value;
+            let chieurong=document.getElementById('chieurong').value;
+            let dientich= chieudai*chieurong;
+            document.getElementById('dientich').innerText=dientich;
+        }
+    </script>
+</body>
+</html>

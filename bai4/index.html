@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <h2>Lãi kép ngân hàng</h2>
+            <p>
+                <label for="txtUSD">Số tiền gốc ban đầu: </label>
+                <input type="number" id="tiengoc" value="0"/>
+            </p>
+            <p>
+                <label for="txtUSD">Lãi suất hàng năm: </label>
+                <input type="number" id="laisuathangnam" value="0"/>
+            </p>
+            <p>
+                <label for="txtUSD">số lần ghép lãi 1 năm: </label>
+                <input type="number" id="solangheplai" value="0"/>
+            </p>
+            <p>
+                <label for="txtUSD">Số năm gửi ngân hàng: </label>
+                <input type="number" id="sonam" value="0"/>
+            </p>
+            <p>
+                <label for="txtF">Lãi suất kép là: </label>
+                <span id="tienlai"></span>
+            </p>
+            <button onclick="calcC()">Đổi</button>
+    </div>
+
+    <script type="text/javascript">
+        function calcC(){
+            let tiengoc= document.getElementById('tiengoc').value;
+            let laisuathangnam=document.getElementById('laisuathangnam').value;
+            let solangheplai=document.getElementById('solangheplai').value;
+            let sonam=document.getElementById('sonam').value;
+            let tienlai= tiengoc * (1 + laisuathangnam / solangheplai)**(solangheplai * sonam);
+            document.getElementById('tienlai').innerText=tienlai;
+        }
+    </script>
+</body>
+</html>

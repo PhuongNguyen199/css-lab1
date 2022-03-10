@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <h2>Chuyển đổi tiền tệ</h2>
+            <p>
+                <label for="txtUSD">Nhập số tiền (USD): </label>
+                <input type="number" name="usd" id="usd" value="0"/>
+            </p>
+            <p>
+                <label for="txtF">VNĐ: </label>
+                <span id="vnd"></span>
+            </p>
+            <button onclick="calcC()">Đổi</button>
+    </div>
+
+    <script type="text/javascript">
+        function calcC(){
+            let usd= document.getElementById('usd').value;
+            let vnd= usd*23500;
+            document.getElementById('vnd').innerText=vnd;
+        }
+    </script>
+</body>
+</html>

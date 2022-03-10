@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <h2>Tính diện tích hình tam giác</h2>
+            <p>
+                <label for="txtUSD">Cạnh A: </label>
+                <input type="number" id="a" value="0"/>
+            </p>
+            <p>
+                <label for="txtUSD">Cạnh B: </label>
+                <input type="number" id="b" value="0"/>
+            </p>
+            <p>
+                <label for="txtUSD">Cạnh C: </label>
+                <input type="number" id="c" value="0"/>
+            </p>
+            <p>
+                <label for="txtF">Diện tích hình tam giác là: </label>
+                <span id="dientich"></span>
+            </p>
+            <button onclick="calcC()">Đổi</button>
+    </div>
+
+    <script type="text/javascript">
+        function calcC(){
+            let a= document.getElementById('a').value;
+            let b=document.getElementById('b').value;
+            let c=document.getElementById('c').value;
+            let chuvi=(a+b+c/2);
+            
+            let dientich= Math.sqrt(chuvi*(chuvi-a)*(chuvi-b)*(chuvi-c));
+            document.getElementById('dientich').innerText=dientich;
+        }
+    </script>
+</body>
+</html>
